@@ -36,41 +36,21 @@ class CategoriesBackendApiTester extends ApiEndToEndTester
      */
     public const PATH_DATA_ATTRIBUTES_LOCALIZED_ATTRIBUTES_LOCALE = '$.data.attributes.localizedAttributes[?(@.locale == "%s")]';
 
-    /**
-     * @param string $identifier
-     *
-     * @return void
-     */
     public function seeResponseJsonContainsCategoryKey(string $identifier): void
     {
         $this->seeResponseJsonPathContains(['data' => ['type' => 'categories', 'id' => $identifier, 'attributes' => ['categoryKey' => $identifier]]]);
     }
 
-    /**
-     * @return void
-     */
     public function seeResponseJsonContainsCategory(): void
     {
         $this->seeResponseJsonPathContains(['data' => ['type' => 'categories']]);
     }
 
-    /**
-     * @param int $categoryId
-     * @param string $uuid
-     *
-     * @return void
-     */
     public function seeResponseJsonContainsCategoryIdAndUuid(int $categoryId, string $uuid): void
     {
         $this->seeResponseJsonPathContains(['data' => ['type' => 'categories', 'id' => $categoryId, 'attributes' => ['idCategory' => $categoryId, 'uuid' => $uuid]]]);
     }
 
-    /**
-     * @param array $localizedAttribute
-     * @param string $locale
-     *
-     * @return void
-     */
     public function seeResponseJsonContainsLocalizedAttribute(array $localizedAttribute, string $locale): void
     {
         $this->seeResponseJsonPathContains($localizedAttribute, sprintf(static::PATH_DATA_ATTRIBUTES_LOCALIZED_ATTRIBUTES_LOCALE, $locale));
@@ -86,23 +66,12 @@ class CategoriesBackendApiTester extends ApiEndToEndTester
         $this->seeResponseJsonPathContains($storeNames, '$.data.attributes.stores');
     }
 
-    /**
-     * @param int $int
-     *
-     * @return void
-     */
     public function seeResponseJsonContainsDataCount(int $int): void
     {
         $this->seeResponseMatchesJsonPath('$.data[' . $int - 1 . ']');
         $this->dontSeeResponseMatchesJsonPath('$.data[' . $int . ']');
     }
 
-    /**
-     * @param string $parentCategoryKey
-     * @param int $sortOrder
-     *
-     * @return void
-     */
     public function seeResponseJsonHasCategoryParent(string $parentCategoryKey, int $sortOrder): void
     {
         $this->seeResponseJsonPathContains([

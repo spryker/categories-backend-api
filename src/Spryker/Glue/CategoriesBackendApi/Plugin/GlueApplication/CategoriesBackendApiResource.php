@@ -17,9 +17,6 @@ use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\JsonApiResourc
 
 class CategoriesBackendApiResource extends AbstractResourcePlugin implements JsonApiResourceInterface
 {
-    /**
-     * @return string
-     */
     public function getType(): string
     {
         return CategoriesBackendApiConfig::RESOURCE_TYPE_CATEGORIES;
@@ -35,9 +32,6 @@ class CategoriesBackendApiResource extends AbstractResourcePlugin implements Jso
         return CategoriesResourceController::class;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\GlueResourceMethodCollectionTransfer
-     */
     public function getDeclaredMethods(): GlueResourceMethodCollectionTransfer
     {
         $resourceMethodConfiguration = (new GlueResourceMethodConfigurationTransfer())

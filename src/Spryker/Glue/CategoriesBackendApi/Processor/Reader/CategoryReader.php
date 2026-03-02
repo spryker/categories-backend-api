@@ -38,12 +38,6 @@ class CategoryReader implements CategoryReaderInterface
      */
     protected CategoriesBackendApiToCategoryImageFacadeInterface $categoryImageFacade;
 
-    /**
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueRequestCategoryMapperInterface $glueRequestCategoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueResponseCategoryMapperInterface $glueResponseCategoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryFacadeInterface $categoryFacade
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryImageFacadeInterface $categoryImageFacade
-     */
     public function __construct(
         GlueRequestCategoryMapperInterface $glueRequestCategoryMapper,
         GlueResponseCategoryMapperInterface $glueResponseCategoryMapper,
@@ -56,11 +50,6 @@ class CategoryReader implements CategoryReaderInterface
         $this->categoryImageFacade = $categoryImageFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getCategory(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
         $categoryCriteriaTransfer = $this->glueRequestCategoryMapper
@@ -72,11 +61,6 @@ class CategoryReader implements CategoryReaderInterface
             ->mapCategoryCollectionTransferToSingleResourceGlueResponseTransfer($categoryCollectionTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getCategoryCollection(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
         $categoryCriteriaTransfer = $this->glueRequestCategoryMapper
@@ -88,11 +72,6 @@ class CategoryReader implements CategoryReaderInterface
             ->mapCategoryCollectionTransferToGlueResponseTransfer($categoryCollectionTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCriteriaTransfer $categoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionTransfer
-     */
     protected function readCategoryCollection(CategoryCriteriaTransfer $categoryCriteriaTransfer): CategoryCollectionTransfer
     {
         $categoryCollectionTransfer = $this->categoryFacade->getCategoryCollection($categoryCriteriaTransfer);

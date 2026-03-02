@@ -13,38 +13,18 @@ use Generated\Shared\Transfer\GlueResponseTransfer;
 
 interface GlueResponseCategoryMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionTransfer $categoryCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionTransferToGlueResponseTransfer(
         CategoryCollectionTransfer $categoryCollectionTransfer
     ): GlueResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionTransfer $categoryCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionTransferToSingleResourceGlueResponseTransfer(
         CategoryCollectionTransfer $categoryCollectionTransfer
     ): GlueResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionResponseTransferToGlueResponseTransfer(
         CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
     ): GlueResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionResponseTransferToSingleResourceGlueResponseTransfer(
         CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
     ): GlueResponseTransfer;

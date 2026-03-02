@@ -12,17 +12,7 @@ use Generated\Shared\Transfer\GlueResponseTransfer;
 
 interface CategoryReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getCategory(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getCategoryCollection(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer;
 }

@@ -21,11 +21,6 @@ class CategoriesGetRestApiFixtures implements FixturesBuilderInterface, Fixtures
      */
     protected $categoryTransfer;
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return \SprykerTest\Shared\Testify\Fixtures\FixturesContainerInterface
-     */
     public function buildFixtures(CategoriesBackendApiTester $I): FixturesContainerInterface
     {
         $this->categoryTransfer = $this->buildCategoryTransferFixture($I);
@@ -33,9 +28,6 @@ class CategoriesGetRestApiFixtures implements FixturesBuilderInterface, Fixtures
         return $this;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CategoryTransfer
-     */
     public function getCategoryTransfer(): CategoryTransfer
     {
         return $this->categoryTransfer;

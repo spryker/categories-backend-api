@@ -30,11 +30,6 @@ class CategoryDeleter implements CategoryDeleterInterface
      */
     protected CategoriesBackendApiToCategoryFacadeInterface $categoryFacade;
 
-    /**
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueRequestCategoryMapperInterface $glueRequestCategoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueResponseCategoryMapperInterface $glueResponseCategoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryFacadeInterface $categoryFacade
-     */
     public function __construct(
         GlueRequestCategoryMapperInterface $glueRequestCategoryMapper,
         GlueResponseCategoryMapperInterface $glueResponseCategoryMapper,
@@ -45,11 +40,6 @@ class CategoryDeleter implements CategoryDeleterInterface
         $this->categoryFacade = $categoryFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function deleteCategories(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
         $categoryCollectionDeleteCriteriaTransfer = $this->glueRequestCategoryMapper->mapGlueRequestToCategoryCollectionDeleteCriteriaTransfer($glueRequestTransfer);

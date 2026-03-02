@@ -28,43 +28,23 @@ class CategoriesBackendApiToCategoryFacadeBridge implements CategoriesBackendApi
         $this->categoryFacade = $categoryFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCriteriaTransfer $categoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionTransfer
-     */
     public function getCategoryCollection(
         CategoryCriteriaTransfer $categoryCriteriaTransfer
     ): CategoryCollectionTransfer {
         return $this->categoryFacade->getCategoryCollection($categoryCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionDeleteCriteriaTransfer $categoryCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionResponseTransfer
-     */
     public function deleteCategoryCollection(
         CategoryCollectionDeleteCriteriaTransfer $categoryCollectionDeleteCriteriaTransfer
     ): CategoryCollectionResponseTransfer {
         return $this->categoryFacade->deleteCategoryCollection($categoryCollectionDeleteCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionResponseTransfer
-     */
     public function updateCategoryCollection(CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer): CategoryCollectionResponseTransfer
     {
         return $this->categoryFacade->updateCategoryCollection($categoryCollectionRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionResponseTransfer
-     */
     public function createCategoryCollection(CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer): CategoryCollectionResponseTransfer
     {
         return $this->categoryFacade->createCategoryCollection($categoryCollectionRequestTransfer);

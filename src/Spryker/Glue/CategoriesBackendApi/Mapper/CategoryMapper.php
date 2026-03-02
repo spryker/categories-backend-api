@@ -40,11 +40,6 @@ class CategoryMapper implements CategoryMapperInterface
      */
     protected CategoriesBackendApiToCategoryFacadeInterface $categoryFacade;
 
-    /**
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToLocaleFacadeInterface $localeFacade
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToStoreFacadeInterface $storeFacade
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryFacadeInterface $categoryFacade
-     */
     public function __construct(
         CategoriesBackendApiToLocaleFacadeInterface $localeFacade,
         CategoriesBackendApiToStoreFacadeInterface $storeFacade,
@@ -55,12 +50,6 @@ class CategoryMapper implements CategoryMapperInterface
         $this->categoryFacade = $categoryFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryTransfer
-     */
     public function mapCategoriesBackendApiAttributesTransferToCategoryTransfer(
         CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer,
         CategoryTransfer $categoryTransfer
@@ -161,11 +150,6 @@ class CategoryMapper implements CategoryMapperInterface
         return $categoryImageSets;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ApiCategoryImageTransfer $apiCategoryImageTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryImageTransfer
-     */
     protected function mapApiCategoryImageTransferToCategoryImageTransfer(ApiCategoryImageTransfer $apiCategoryImageTransfer): CategoryImageTransfer
     {
         $categoryImageTransfer = (new CategoryImageTransfer())
@@ -194,13 +178,6 @@ class CategoryMapper implements CategoryMapperInterface
         return $storeRelationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ApiCategoryParentTransfer $apiCategoryParentTransfer
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     * @param \Generated\Shared\Transfer\NodeTransfer $nodeTransfer
-     *
-     * @return \Generated\Shared\Transfer\NodeTransfer
-     */
     protected function mapApiCategoryParentTransferToNodeTransfer(
         ApiCategoryParentTransfer $apiCategoryParentTransfer,
         CategoryTransfer $categoryTransfer,

@@ -38,12 +38,6 @@ class CategoryCreator implements CategoryCreatorInterface
      */
     protected GlueResponseCategoryMapperInterface $glueResponseCategoryMapper;
 
-    /**
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryFacadeInterface $categoryFacade
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\CategoryMapperInterface $categoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueRequestCategoryMapperInterface $glueRequestCategoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueResponseCategoryMapperInterface $glueResponseCategoryMapper
-     */
     public function __construct(
         CategoriesBackendApiToCategoryFacadeInterface $categoryFacade,
         CategoryMapperInterface $categoryMapper,
@@ -56,12 +50,6 @@ class CategoryCreator implements CategoryCreatorInterface
         $this->glueResponseCategoryMapper = $glueResponseCategoryMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function createCategory(
         CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer,
         GlueRequestTransfer $glueRequestTransfer

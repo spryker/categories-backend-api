@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\CategoryTransfer;
 
 interface CategoriesBackendApiToCategoryImageFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryTransfer
-     */
     public function expandCategoryWithImageSets(CategoryTransfer $categoryTransfer): CategoryTransfer;
 }

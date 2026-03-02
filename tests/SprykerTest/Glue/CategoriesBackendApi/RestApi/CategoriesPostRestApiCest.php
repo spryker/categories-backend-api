@@ -27,11 +27,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CategoriesPostRestApiCest
 {
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryPostToCreateARootCategoryReturnsHttpResponseCode201(CategoriesBackendApiTester $I): void
     {
         // Arrange
@@ -60,11 +55,6 @@ class CategoriesPostRestApiCest
         $I->seeResponseJsonContainsCategory();
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function testCategoryPostAssignsToParentCategory(CategoriesBackendApiTester $I): void
     {
         // Arrange
@@ -97,11 +87,6 @@ class CategoriesPostRestApiCest
         $I->seeResponseJsonHasCategoryParent($parent->getCategoryKeyOrFail(), $sortOrder);
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function testCategoryPostSavesLocalizedAttribute(CategoriesBackendApiTester $I): void
     {
         // Arrange

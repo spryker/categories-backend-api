@@ -23,11 +23,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CategoriesDeleteRestApiCest
 {
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryDeleteReturnsHttpResponseCode204(CategoriesBackendApiTester $I): void
     {
         // Arrange
@@ -43,11 +38,6 @@ class CategoriesDeleteRestApiCest
         $I->seeResponseCodeIs(Response::HTTP_NO_CONTENT);
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryDeleteReturnsHttpResponseCode404(CategoriesBackendApiTester $I): void
     {
         // Arrange

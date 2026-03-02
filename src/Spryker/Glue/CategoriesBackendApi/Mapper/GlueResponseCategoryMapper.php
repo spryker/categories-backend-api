@@ -27,11 +27,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionTransfer $categoryCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionTransferToGlueResponseTransfer(
         CategoryCollectionTransfer $categoryCollectionTransfer
     ): GlueResponseTransfer {
@@ -48,11 +43,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $glueResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionTransfer $categoryCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionTransferToSingleResourceGlueResponseTransfer(
         CategoryCollectionTransfer $categoryCollectionTransfer
     ): GlueResponseTransfer {
@@ -65,11 +55,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $this->addNotFoundError($glueResponseTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionResponseTransferToGlueResponseTransfer(
         CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
     ): GlueResponseTransfer {
@@ -92,11 +77,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $glueResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function mapCategoryCollectionResponseTransferToSingleResourceGlueResponseTransfer(
         CategoryCollectionResponseTransfer $categoryCollectionResponseTransfer
     ): GlueResponseTransfer {
@@ -109,11 +89,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $this->addNotFoundError($glueResponseTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueResponseTransfer $glueResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function addNotFoundError(GlueResponseTransfer $glueResponseTransfer): GlueResponseTransfer
     {
         $glueResponseTransfer
@@ -127,12 +102,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $glueResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     * @param \Generated\Shared\Transfer\GlueResponseTransfer $glueResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function addCategoryTransferToGlueResponse(
         CategoryTransfer $categoryTransfer,
         GlueResponseTransfer $glueResponseTransfer
@@ -182,12 +151,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $apiLocalizedAttributes;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreRelationTransfer $storeRelationTransfer
-     * @param \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
-     *
-     * @return void
-     */
     public function mapCategoryStoreRelationToCategoriesBackendApiAttributesStores(
         StoreRelationTransfer $storeRelationTransfer,
         CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
@@ -197,11 +160,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer
-     */
     public function mapCategoryTransferToCategoriesBackendApiAttributesTransfer(CategoryTransfer $categoryTransfer): CategoriesBackendApiAttributesTransfer
     {
         $categoriesBackendApiAttributesTransfer = new CategoriesBackendApiAttributesTransfer();
@@ -210,11 +168,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $categoriesBackendApiAttributesTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\ApiCategoryParentTransfer
-     */
     public function mapCategoryTransferParentNodeToApiCategoryParentTransfer(CategoryTransfer $categoryTransfer): ApiCategoryParentTransfer
     {
         $apiCategoryParentTransfer = new ApiCategoryParentTransfer();
@@ -228,11 +181,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $apiCategoryParentTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryImageSetTransfer $imageSet
-     *
-     * @return \Generated\Shared\Transfer\ApiCategoryImageSetTransfer
-     */
     public function mapCategoryImageSetTransferToApiCategoryImageSetTransfer(CategoryImageSetTransfer $imageSet): ApiCategoryImageSetTransfer
     {
         $apiCategoryImageSetTransfer = new ApiCategoryImageSetTransfer();
@@ -266,11 +214,6 @@ class GlueResponseCategoryMapper implements GlueResponseCategoryMapperInterface
         return $apiCategoryImageSetTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryImageTransfer $categoryImageTransfer
-     *
-     * @return \Generated\Shared\Transfer\ApiCategoryImageTransfer
-     */
     public function mapCategoryImageTransferToApiCategoryImageTransfer(CategoryImageTransfer $categoryImageTransfer): ApiCategoryImageTransfer
     {
         $apiCategoryImageTransfer = new ApiCategoryImageTransfer();

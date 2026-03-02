@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\CategoryTransfer;
 
 interface CategoryMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryTransfer
-     */
     public function mapCategoriesBackendApiAttributesTransferToCategoryTransfer(
         CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer,
         CategoryTransfer $categoryTransfer

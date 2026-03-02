@@ -23,11 +23,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CategoriesGetRestApiCest
 {
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryGetReturnsHttpResponseCode200(CategoriesBackendApiTester $I): void
     {
         // Arrange
@@ -47,11 +42,6 @@ class CategoriesGetRestApiCest
         $I->seeResponseJsonContainsCategoryKey($identifier);
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryGetReturnsHttpResponseCode404(CategoriesBackendApiTester $I): void
     {
         // Arrange

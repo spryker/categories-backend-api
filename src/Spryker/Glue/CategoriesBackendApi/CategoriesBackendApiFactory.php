@@ -29,41 +29,26 @@ use Spryker\Glue\Kernel\Backend\AbstractFactory;
 
 class CategoriesBackendApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Mapper\GlueRequestCategoryMapperInterface
-     */
     public function createGlueRequestCategoryMapper(): GlueRequestCategoryMapperInterface
     {
         return new GlueRequestCategoryMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Mapper\GlueResponseCategoryMapperInterface
-     */
     public function createGlueResponseCategoryMapper(): GlueResponseCategoryMapperInterface
     {
         return new GlueResponseCategoryMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryFacadeInterface
-     */
     public function getCategoryFacade(): CategoriesBackendApiToCategoryFacadeInterface
     {
         return $this->getProvidedDependency(CategoriesBackendApiDependencyProvider::FACADE_CATEGORY);
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryImageFacadeInterface
-     */
     public function getCategoryImageFacade(): CategoriesBackendApiToCategoryImageFacadeInterface
     {
         return $this->getProvidedDependency(CategoriesBackendApiDependencyProvider::FACADE_CATEGORY_IMAGE);
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Mapper\CategoryMapperInterface
-     */
     public function createCategoryMapper(): CategoryMapperInterface
     {
         return new CategoryMapper(
@@ -73,9 +58,6 @@ class CategoriesBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Processor\Reader\CategoryReaderInterface
-     */
     public function createCategoryReader(): CategoryReaderInterface
     {
         return new CategoryReader(
@@ -86,9 +68,6 @@ class CategoriesBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Processor\Deleter\CategoryDeleterInterface
-     */
     public function createCategoryDeleter(): CategoryDeleterInterface
     {
         return new CategoryDeleter(
@@ -98,9 +77,6 @@ class CategoriesBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Processor\Updater\CategoryUpdaterInterface
-     */
     public function createCategoryUpdater(): CategoryUpdaterInterface
     {
         return new CategoryUpdater(
@@ -112,25 +88,16 @@ class CategoriesBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): CategoriesBackendApiToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(CategoriesBackendApiDependencyProvider::FACADE_LOCALE);
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToStoreFacadeInterface
-     */
     public function getStoreFacade(): CategoriesBackendApiToStoreFacadeInterface
     {
         return $this->getProvidedDependency(CategoriesBackendApiDependencyProvider::FACADE_STORE);
     }
 
-    /**
-     * @return \Spryker\Glue\CategoriesBackendApi\Processor\Creator\CategoryCreatorInterface
-     */
     public function createCategoryCreator(): CategoryCreatorInterface
     {
         return new CategoryCreator(

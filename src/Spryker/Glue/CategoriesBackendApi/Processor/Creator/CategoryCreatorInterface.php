@@ -13,12 +13,6 @@ use Generated\Shared\Transfer\GlueResponseTransfer;
 
 interface CategoryCreatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function createCategory(
         CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer,
         GlueRequestTransfer $glueRequestTransfer

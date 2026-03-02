@@ -45,13 +45,6 @@ class CategoryUpdater implements CategoryUpdaterInterface
      */
     protected CategoryReaderInterface $categoryReader;
 
-    /**
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueRequestCategoryMapperInterface $glueRequestCategoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\GlueResponseCategoryMapperInterface $glueResponseCategoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Dependency\Facade\CategoriesBackendApiToCategoryFacadeInterface $categoryFacade
-     * @param \Spryker\Glue\CategoriesBackendApi\Mapper\CategoryMapperInterface $categoryMapper
-     * @param \Spryker\Glue\CategoriesBackendApi\Processor\Reader\CategoryReaderInterface $categoryReader
-     */
     public function __construct(
         GlueRequestCategoryMapperInterface $glueRequestCategoryMapper,
         GlueResponseCategoryMapperInterface $glueResponseCategoryMapper,
@@ -66,12 +59,6 @@ class CategoryUpdater implements CategoryUpdaterInterface
         $this->categoryReader = $categoryReader;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function updateCategory(
         CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer,
         GlueRequestTransfer $glueRequestTransfer

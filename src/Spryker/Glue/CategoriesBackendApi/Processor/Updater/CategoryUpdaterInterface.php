@@ -13,12 +13,6 @@ use Generated\Shared\Transfer\GlueResponseTransfer;
 
 interface CategoryUpdaterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function updateCategory(
         CategoriesBackendApiAttributesTransfer $categoriesBackendApiAttributesTransfer,
         GlueRequestTransfer $glueRequestTransfer

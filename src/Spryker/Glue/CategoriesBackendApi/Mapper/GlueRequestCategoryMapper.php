@@ -16,11 +16,6 @@ use Generated\Shared\Transfer\GlueRequestTransfer;
 
 class GlueRequestCategoryMapper implements GlueRequestCategoryMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCriteriaTransfer
-     */
     public function mapGlueRequestTransferToCategoryCriteriaTransfer(
         GlueRequestTransfer $glueRequestTransfer
     ): CategoryCriteriaTransfer {
@@ -40,11 +35,6 @@ class GlueRequestCategoryMapper implements GlueRequestCategoryMapperInterface
         return $categoryCriteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionDeleteCriteriaTransfer
-     */
     public function mapGlueRequestTransferToCategoryCollectionDeleteCriteriaTransfer(
         GlueRequestTransfer $glueRequestTransfer
     ): CategoryCollectionDeleteCriteriaTransfer {
@@ -59,11 +49,6 @@ class GlueRequestCategoryMapper implements GlueRequestCategoryMapperInterface
         return $categoryDeleteCollectionCriteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCriteriaTransfer
-     */
     public function mapGlueGetRequestToCategoryCriteriaTransfer(
         GlueRequestTransfer $glueRequestTransfer
     ): CategoryCriteriaTransfer {
@@ -82,9 +67,6 @@ class GlueRequestCategoryMapper implements GlueRequestCategoryMapperInterface
         return $categoryCriteriaTransfer;
     }
 
-    /**
-     * @inheritDoc
-     */
     public function mapGlueGetCollectionRequestToCategoryCriteriaTransfer(
         GlueRequestTransfer $glueRequestTransfer
     ): CategoryCriteriaTransfer {
@@ -101,11 +83,6 @@ class GlueRequestCategoryMapper implements GlueRequestCategoryMapperInterface
         return $categoryCriteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionDeleteCriteriaTransfer
-     */
     public function mapGlueRequestToCategoryCollectionDeleteCriteriaTransfer(
         GlueRequestTransfer $glueRequestTransfer
     ): CategoryCollectionDeleteCriteriaTransfer {
@@ -115,12 +92,6 @@ class GlueRequestCategoryMapper implements GlueRequestCategoryMapperInterface
         return $categoryCollectionDeleteCriteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionRequestTransfer
-     */
     public function mapGlueRequestToCategoryCollectionRequestTransfer(
         CategoryTransfer $categoryTransfer,
         GlueRequestTransfer $glueRequestTransfer

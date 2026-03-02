@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\GlueResponseTransfer;
 
 interface CategoryDeleterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function deleteCategories(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer;
 }

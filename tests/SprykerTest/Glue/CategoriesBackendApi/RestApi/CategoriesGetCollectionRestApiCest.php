@@ -23,11 +23,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CategoriesGetCollectionRestApiCest
 {
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function testCategoryGetReturnsPaginatedResults(CategoriesBackendApiTester $I): void
     {
         // Arrange

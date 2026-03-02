@@ -15,33 +15,13 @@ use Generated\Shared\Transfer\CategoryCriteriaTransfer;
 
 interface CategoriesBackendApiToCategoryFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCriteriaTransfer $categoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionTransfer
-     */
     public function getCategoryCollection(CategoryCriteriaTransfer $categoryCriteriaTransfer): CategoryCollectionTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionDeleteCriteriaTransfer $categoryCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionResponseTransfer
-     */
     public function deleteCategoryCollection(
         CategoryCollectionDeleteCriteriaTransfer $categoryCollectionDeleteCriteriaTransfer
     ): CategoryCollectionResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionResponseTransfer
-     */
     public function updateCategoryCollection(CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer): CategoryCollectionResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionResponseTransfer
-     */
     public function createCategoryCollection(CategoryCollectionRequestTransfer $categoryCollectionRequestTransfer): CategoryCollectionResponseTransfer;
 }

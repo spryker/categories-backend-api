@@ -20,11 +20,6 @@ use Spryker\Shared\ZedRequest\ZedRequestConstants;
 
 class CategoriesHelper extends Module
 {
-    /**
-     * @param string|null $categoryIdentifier
-     *
-     * @return string
-     */
     public function buildCategoriesUrl(?string $categoryIdentifier = null): string
     {
         return $categoryIdentifier !== null ? $this->buildBackendApiUrl('categories/{id}', ['id' => $categoryIdentifier]) : $this->buildBackendApiUrl('categories');
@@ -59,31 +54,16 @@ class CategoriesHelper extends Module
         return strtr($url, $refinedParams);
     }
 
-    /**
-     * @param array $seed
-     *
-     * @return \Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer
-     */
     public function haveCategoriesBackendApiAttributesTransfer(array $seed = []): CategoriesBackendApiAttributesTransfer
     {
         return (new CategoriesBackendApiAttributesBuilder($seed))->build();
     }
 
-    /**
-     * @param array $seed
-     *
-     * @return \Generated\Shared\Transfer\ApiCategoryParentTransfer
-     */
     public function haveApiCategoryParentTransfer(array $seed = []): ApiCategoryParentTransfer
     {
         return (new ApiCategoryParentBuilder($seed))->build();
     }
 
-    /**
-     * @param array $seed
-     *
-     * @return \Generated\Shared\Transfer\ApiCategoryLocalizedAttributeTransfer
-     */
     public function haveApiCategoryLocalizedAttributeTransfer(array $seed = []): ApiCategoryLocalizedAttributeTransfer
     {
         return (new ApiCategoryLocalizedAttributeBuilder($seed))->build();

@@ -24,11 +24,6 @@ class CategoriesBackendApiToCategoryImageFacadeBridge implements CategoriesBacke
         $this->categoryImageFacade = $categoryImageFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryTransfer
-     */
     public function expandCategoryWithImageSets(CategoryTransfer $categoryTransfer): CategoryTransfer
     {
         return $this->categoryImageFacade->expandCategoryWithImageSets($categoryTransfer);

@@ -39,11 +39,6 @@ class CategoriesBackendApiDependencyProvider extends AbstractBundleDependencyPro
      */
     public const FACADE_STORE = 'FACADE_STORE';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     public function provideBackendDependencies(Container $container): Container
     {
         $container = parent::provideBackendDependencies($container);
@@ -55,11 +50,6 @@ class CategoriesBackendApiDependencyProvider extends AbstractBundleDependencyPro
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addCategoryFacade(Container $container): Container
     {
         $container->set(static::FACADE_CATEGORY, function (Container $container) {
@@ -69,11 +59,6 @@ class CategoriesBackendApiDependencyProvider extends AbstractBundleDependencyPro
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addCategoryImageFacade(Container $container): Container
     {
         $container->set(static::FACADE_CATEGORY_IMAGE, function (Container $container) {
@@ -83,11 +68,6 @@ class CategoriesBackendApiDependencyProvider extends AbstractBundleDependencyPro
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addLocaleFacade(Container $container): Container
     {
         $container->set(static::FACADE_LOCALE, function (Container $container) {
@@ -97,11 +77,6 @@ class CategoriesBackendApiDependencyProvider extends AbstractBundleDependencyPro
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addStoreFacade(Container $container): Container
     {
         $container->set(static::FACADE_STORE, function (Container $container) {

@@ -31,11 +31,6 @@ class CategoriesPatchRestApiCest
      */
     public const STORE_NAME_DE = 'DE';
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryPatchRootCategoryReturnsHttpResponseCode200(CategoriesBackendApiTester $I): void
     {
         // Arrange
@@ -61,11 +56,6 @@ class CategoriesPatchRestApiCest
         $I->seeResponseJsonContainsCategory();
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryPatchWithLocalizedAttributesKeepsUnspecifiedFields(CategoriesBackendApiTester $I): void
     {
         // Arrange
@@ -104,11 +94,6 @@ class CategoriesPatchRestApiCest
         ], $localeName);
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryPatchCanSpecifyNewLocalizedAttributesForNewLocales(CategoriesBackendApiTester $I): void
     {
         // Arrange
@@ -157,11 +142,6 @@ class CategoriesPatchRestApiCest
         $I->seeResponseJsonContainsLocalizedAttribute($secondaryLocaleLocalizedAttribute, $secondaryLocale->getLocaleNameOrFail());
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function requestCategoryPatchCanAddCategoryToNewStore(CategoriesBackendApiTester $I): void
     {
         $I->havePluginForSavingCategoryStoreRelations();
@@ -197,11 +177,6 @@ class CategoriesPatchRestApiCest
         ]);
     }
 
-    /**
-     * @param \SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester $I
-     *
-     * @return void
-     */
     public function testCategoryPatchRequestCanMoveCategoryToNewParent(CategoriesBackendApiTester $I): void
     {
         // Arrange
