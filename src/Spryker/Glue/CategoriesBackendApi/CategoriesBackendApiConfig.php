@@ -12,6 +12,8 @@ use Spryker\Glue\Kernel\AbstractBundleConfig;
 class CategoriesBackendApiConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const RESOURCE_TYPE_CATEGORIES = 'categories';
