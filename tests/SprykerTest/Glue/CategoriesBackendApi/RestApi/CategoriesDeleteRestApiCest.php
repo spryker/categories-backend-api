@@ -7,6 +7,7 @@
 
 namespace SprykerTest\Glue\CategoriesBackendApi\RestApi;
 
+use Codeception\Attribute\Skip;
 use Spryker\Glue\CategoriesBackendApi\Plugin\GlueApplication\CategoriesBackendApiResource;
 use SprykerTest\Glue\CategoriesBackendApi\CategoriesBackendApiTester;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,6 +22,7 @@ use Symfony\Component\HttpFoundation\Response;
  * @group CategoriesDeleteRestApiCest
  * Add your own group annotations below this line
  */
+#[Skip('The legacy /categories Backend API endpoint is deliberately unwired - superseded by the API Platform categories/category-products resources (CC-40112). Suite kept for review; removal planned with the module deprecation follow-up.')]
 class CategoriesDeleteRestApiCest
 {
     public function requestCategoryDeleteReturnsHttpResponseCode204(CategoriesBackendApiTester $I): void

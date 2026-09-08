@@ -7,6 +7,7 @@
 
 namespace SprykerTest\Glue\CategoriesBackendApi\RestApi;
 
+use Codeception\Attribute\Skip;
 use Generated\Shared\Transfer\ApiCategoryLocalizedAttributeTransfer;
 use Generated\Shared\Transfer\ApiCategoryParentTransfer;
 use Generated\Shared\Transfer\CategoriesBackendApiAttributesTransfer;
@@ -25,6 +26,7 @@ use Symfony\Component\HttpFoundation\Response;
  * @group CategoriesPostRestApiCest
  * Add your own group annotations below this line
  */
+#[Skip('The legacy /categories Backend API endpoint is deliberately unwired - superseded by the API Platform categories/category-products resources (CC-40112). Suite kept for review; removal planned with the module deprecation follow-up.')]
 class CategoriesPostRestApiCest
 {
     public function requestCategoryPostToCreateARootCategoryReturnsHttpResponseCode201(CategoriesBackendApiTester $I): void
