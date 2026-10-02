@@ -30,7 +30,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Spryker\\": "src/Spryker/"
+            "Spryker\\": "src/Spryker/",
+            "SprykerTest\\Glue\\CategoriesBackendApi\\Helper\\": "tests/SprykerTest/Glue/CategoriesBackendApi/_support/Helper/"
         }
     },
     "autoload-dev": {
